@@ -32,6 +32,7 @@ const toggleChatWindow = () => {
     src="/chat-icon.png"
     loading="lazy"
     class="chat__icon"
+    alt="chat icon"
     @click="toggleChatWindow"
   />
 
