@@ -12,10 +12,14 @@ const props = defineProps({
 const initials = computed(() => {
   return `${props.user.firstName[0]}${props.user.lastName[0]}`;
 });
+
+const fullName = computed(() => {
+  return `${props.user.firstName} ${props.user.lastName}`;
+});
 </script>
 
 <template>
-  <div class="user__initial">
+  <div v-tooltip="fullName" class="user__initial">
     <span>
       {{ initials }}
     </span>
