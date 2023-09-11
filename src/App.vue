@@ -2,6 +2,7 @@
 import { onMounted, computed } from 'vue';
 import { useUserStore } from './stores/UserStore';
 import { useConversationStore } from './stores/ConversationStore';
+import ChatBox from './components/ChatBox.vue';
 
 const userStore = useUserStore();
 const conversationStore = useConversationStore();
@@ -27,6 +28,8 @@ onMounted(() => {
       Welcome back, {{ currentUser.firstName }}!
     </span>
   </div>
+
+  <ChatBox />
 </template>
 
 <style scoped>
