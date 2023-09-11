@@ -13,3 +13,10 @@ export function mockFetch(time = 500, dataType) {
     }, time);
   });
 }
+
+export const getFormattedCurrentTime = () => {
+  const now = new Date();
+  const formattedTime = now.toISOString().slice(0, 19).replace('T', ' ');
+
+  return String(formattedTime);
+};

@@ -1,10 +1,23 @@
 <script setup>
+import { ref } from 'vue';
+import { useConversationStore } from '../stores/ConversationStore';
+import { useUserStore } from '../stores/UserStore';
+import { getFormattedCurrentTime } from '../utils';
 import ChatConversation from './ChatConversation.vue';
 import ChatCompose from './ChatCompose.vue';
-import { ref } from 'vue';
+
+const conversationStore = useConversationStore();
+const userStore = useUserStore();
 
 const sendReply = async (message) => {
-  console.log('message', message);
+  const payload = {
+    id: conversationStore.nextConversationId,
+    from: userStore.currentUser,
+    message,
+    date: getFormattedCurrentTime(),
+  };
+
+  await conversationStore.updateConversation(payload);
 };
 
 const isChatWindowOpen = ref(false);

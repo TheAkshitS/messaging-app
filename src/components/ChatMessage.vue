@@ -38,7 +38,7 @@ const isSender = computed(() => {
   display: flex;
   align-items: flex-end;
   max-width: 60%;
-  margin-bottom: 0.625rem;
+  margin-bottom: 10px;
 }
 
 .message__container--reverse {
