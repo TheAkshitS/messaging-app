@@ -5,3 +5,13 @@ This template should help get you started developing with Vue 3 in Vite. The tem
 ## Recommended IDE Setup
 
 - [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+
+## 🧞 Commands
+
+All commands are run from the root of the project, from a terminal:
+
+| Command        | Action                                  |
+| :------------- | :-------------------------------------- |
+| `pnpm install` | Installs dependencies                   |
+| `pnpm dev`     | Starts local dev server                 |
+| `pnpm build`   | Build your production site to `./dist/` |
